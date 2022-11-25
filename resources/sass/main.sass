@@ -1,0 +1,84 @@
+@import "bootstrap"
+$main-body-color: #232044
+$table-color: #322e59
+$table-purple: #bcbacf
+$bag-info: #ff9800
+$bag-black: #1c1c1c
+body
+    background-color: $main-body-color
+    color: $table-purple
+    .todo_list
+        justify-content: center
+        align-items: center
+        display: flex
+        #list-todo-block
+            overflow-x: hidden
+            overflow-y: auto
+        .todo-group
+            max-height: 100vh
+            align-items: center
+            top: 30%
+            overflow-y: scroll
+            transition: opacity .5s ease 0s, visibility 0.5s, transform 0s ease 1s, -webkit-transform 0s ease 1s
+            background-color: $table-color
+            border-radius: 20px
+            -webkit-box-shadow: -45px -38px 0px -6px rgba(27, 24, 59, 0.75)
+            -moz-box-shadow: -45px -38px 0px -6px rgba(27, 24, 59, 0.75)
+            box-shadow: -45px -38px 0px -6px rgba(27, 24, 59, 0.75)
+
+            &::-webkit-scrollbar
+                width: 10px
+                background-color: rgba(86, 84, 121, 0.75)
+
+            &::-webkit-scrollbar-thumb
+                border-radius: 5px
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgba(20, 18, 40, 0.75)), color-stop(0.72, rgba(11, 9, 28, 0.75)), color-stop(0.86, rgba(13, 12, 38, 0.75)))
+
+            .todo_list_table
+                border-collapse: collapse
+                tbody
+                    border-radius: 40px
+                    margin-top: 20px
+                    margin-bottom: 20px
+                    padding-left: 50px
+                    padding-right: 50px
+
+                tr
+                    padding-bottom: 20px
+
+                td
+                    text-align: center
+                    table-layout: fixed
+                    max-width: 200px
+                    padding-bottom: 20px
+                    padding-top: 20px
+                    vertical-align: text-top
+                    .del-todo
+                        margin-right: 5px
+
+                th
+                    padding-left: 30px
+                    padding-right: 30px
+                    text-align: center
+                    padding-bottom: 20px
+
+#status-bag
+    transition: opacity .5s ease 0s, visibility 0.5s
+    z-index: 1
+
+#add_todo_list_block
+    overflow: hidden
+
+.todo-group-input
+    background: $main-body-color !important
+    color: $table-purple !important
+    border: 1px solid $table-purple
+
+.input-group-text
+    background: $main-body-color !important
+    border: 0
+    color: $table-purple !important
+    border-radius: 0
+
+#todo-group-buttons
+    margin: 30px 50px 15px 50px
