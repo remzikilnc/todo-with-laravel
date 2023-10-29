@@ -14,7 +14,7 @@
                 <th>Todo</th>
                 <th>Operations</th>
             </tr>
-        @foreach($to_list as $todo)
+        @foreach($todoList as $todo)
             <tr data-id="{{$todo['id']}}" class="table-content">
                 <td class="@if($todo['status'] == 1) text-success @else text-danger @endif" data-status="@if($todo['status'] == 1) 1 @else 0 @endif">{{$todo['todo']}}</td>
                 <td class="justify-content-between d-flex">
